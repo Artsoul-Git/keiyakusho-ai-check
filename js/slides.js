@@ -119,20 +119,37 @@
   function slide08() {
     return '<section class="slide" data-section="part1" data-title="ケース①：損害賠償が「青天井」になった" data-notes="（フック強め）少し、身近な話から入らせてください。1つ目のケースです。（少し間）普段の仕事で、契約書をどのくらい確認していますか。相手が出してきたものだから大丈夫だろう——そう判断されていることが多いのではないかと思います。でも実際に起きたケースをお伝えします。（少し間）業務委託のWebシステム開発で、作業ミスが発生しました。契約書には&#39;甲に生じた一切の損害を乙が賠償する&#39;と書かれていた。上限の記載は一切なし。結果、300万円の損害賠償を請求されました。（少し間）見るべき箇所は、損害賠償条項に&#39;上限額&#39;の記載があるかどうか。たったそれだけです。（接続）次のケースもいきます。">' +
       H('ケース①：損害賠償が「青天井」になった') +
-      '<div class="slide-content">' +
-        '<div class="s-risk-list">' +
-          '<div class="s-risk-item">' +
-            '<div class="s-risk-header"><span class="s-risk-badge high">実際のケース</span><span class="s-risk-title">業務委託契約 / Webシステム開発</span></div>' +
-            '<div class="s-risk-body">' +
-              '「甲に生じた一切の損害を乙が賠償する」<br>上限の記載なし。作業ミスで300万円を請求された。' +
-              '<div class="s-risk-proposal">見るべき条項：損害賠償条項の「上限額」の有無</div>' +
+      '<div class="slide-content" style="flex-direction:row;align-items:center;gap:2.5cqw;">' +
+        '<div style="flex:1;display:flex;flex-direction:column;gap:1cqw;">' +
+          '<div class="s-risk-list">' +
+            '<div class="s-risk-item">' +
+              '<div class="s-risk-header"><span class="s-risk-badge high">実際のケース</span><span class="s-risk-title">業務委託契約 / Webシステム開発</span></div>' +
+              '<div class="s-risk-body">' +
+                '「甲に生じた一切の損害を乙が賠償する」<br>上限の記載なし。作業ミスで300万円を請求された。' +
+                '<div class="s-risk-proposal">見るべき条項：損害賠償条項の「上限額」の有無</div>' +
+              '</div>' +
             '</div>' +
           '</div>' +
+          '<ul class="s-list">' +
+            '<li class="s-list-arrow">「普通はこういう書き方をしない」とは限らない</li>' +
+            '<li class="s-list-arrow">相手が出した書類だから大丈夫、ではない</li>' +
+          '</ul>' +
         '</div>' +
-        '<ul class="s-list" style="margin-top:1cqw;">' +
-          '<li class="s-list-arrow">「普通はこういう書き方をしない」とは限らない</li>' +
-          '<li class="s-list-arrow">相手が出した書類だから大丈夫、ではない</li>' +
-        '</ul>' +
+        '<div style="width:12cqw;flex-shrink:0;opacity:.9;">' +
+          '<svg viewBox="0 0 88 108" fill="none" style="width:100%;height:auto;">' +
+            '<rect x="8" y="4" width="62" height="83" rx="6" fill="#f8fdf0" stroke="#A6BE54" stroke-width="2"/>' +
+            '<path d="M52 4L70 22H52V4z" fill="#E8F1D8"/>' +
+            '<path d="M52 4L70 22" stroke="#A6BE54" stroke-width="1.5"/>' +
+            '<rect x="18" y="30" width="36" height="3" rx="1.5" fill="#C7D99B"/>' +
+            '<rect x="18" y="38" width="36" height="3" rx="1.5" fill="#C7D99B"/>' +
+            '<rect x="18" y="46" width="28" height="3" rx="1.5" fill="#C7D99B"/>' +
+            '<rect x="18" y="55" width="40" height="6" rx="2" fill="#fee2e2" stroke="#c0392b" stroke-width="1"/>' +
+            '<rect x="18" y="66" width="32" height="3" rx="1.5" fill="#C7D99B"/>' +
+            '<circle cx="70" cy="24" r="20" fill="#c0392b" stroke="white" stroke-width="2.5"/>' +
+            '<rect x="67" y="13" width="6" height="13" rx="2" fill="white"/>' +
+            '<circle cx="70" cy="31" r="3.5" fill="white"/>' +
+          '</svg>' +
+        '</div>' +
       '</div>' +
     '</section>';
   }
@@ -140,20 +157,38 @@
   function slide09() {
     return '<section class="slide" data-section="part1" data-title="ケース②：NDAで業務範囲が実質制限された" data-notes="（フック）2つ目のケースです。秘密保持契約——NDAというのは、秘密を守るための書類ですよね。でもこのケースでは、守秘だけじゃなかった。（少し間）&#39;業務を通じて知り得た一切の情報&#39;を秘密情報とするNDAにサインしました。あとから気づいたのは、この条項があると、同業他社の仕事を受けられなくなる、ということです。（少し間）本来はこの&#39;秘密情報の範囲&#39;を交渉で狭めることができたはず。でも気づかなかった。（接続）NDAは守秘のためだけとは限らない——このことを知っておいてほしいんです。">' +
       H('ケース②：NDAで業務範囲が実質制限された') +
-      '<div class="slide-content">' +
-        '<div class="s-risk-list">' +
-          '<div class="s-risk-item">' +
-            '<div class="s-risk-header"><span class="s-risk-badge high">実際のケース</span><span class="s-risk-title">NDA（秘密保持契約）/ フリーランス</span></div>' +
-            '<div class="s-risk-body">' +
-              '「業務を通じて知り得た一切の情報」が秘密情報に。<br>同業他社の仕事を受けることができなくなった。' +
-              '<div class="s-risk-proposal">見るべき条項：「秘密情報の範囲」と「競業避止義務」の有無</div>' +
+      '<div class="slide-content" style="flex-direction:row;align-items:center;gap:2.5cqw;">' +
+        '<div style="flex:1;display:flex;flex-direction:column;gap:1cqw;">' +
+          '<div class="s-risk-list">' +
+            '<div class="s-risk-item">' +
+              '<div class="s-risk-header"><span class="s-risk-badge high">実際のケース</span><span class="s-risk-title">NDA（秘密保持契約）/ フリーランス</span></div>' +
+              '<div class="s-risk-body">' +
+                '「業務を通じて知り得た一切の情報」が秘密情報に。<br>同業他社の仕事を受けることができなくなった。' +
+                '<div class="s-risk-proposal">見るべき条項：「秘密情報の範囲」と「競業避止義務」の有無</div>' +
+              '</div>' +
             '</div>' +
           '</div>' +
+          '<ul class="s-list">' +
+            '<li class="s-list-arrow">「一切の情報」は広すぎる。交渉できたはず</li>' +
+            '<li class="s-list-arrow">NDAは守秘のためだけとは限らない</li>' +
+          '</ul>' +
         '</div>' +
-        '<ul class="s-list" style="margin-top:1cqw;">' +
-          '<li class="s-list-arrow">「一切の情報」は広すぎる。交渉できたはず</li>' +
-          '<li class="s-list-arrow">NDAは守秘のためだけとは限らない</li>' +
-        '</ul>' +
+        '<div style="width:12cqw;flex-shrink:0;opacity:.9;">' +
+          '<svg viewBox="0 0 88 108" fill="none" style="width:100%;height:auto;">' +
+            '<rect x="8" y="4" width="62" height="83" rx="6" fill="#f8fdf0" stroke="#A6BE54" stroke-width="2"/>' +
+            '<path d="M52 4L70 22H52V4z" fill="#E8F1D8"/>' +
+            '<path d="M52 4L70 22" stroke="#A6BE54" stroke-width="1.5"/>' +
+            '<rect x="18" y="30" width="36" height="3" rx="1.5" fill="#C7D99B"/>' +
+            '<rect x="18" y="38" width="36" height="3" rx="1.5" fill="#C7D99B"/>' +
+            '<rect x="18" y="46" width="28" height="3" rx="1.5" fill="#C7D99B"/>' +
+            '<rect x="18" y="55" width="40" height="6" rx="2" fill="#fef3e2" stroke="#e67e22" stroke-width="1"/>' +
+            '<rect x="18" y="66" width="32" height="3" rx="1.5" fill="#C7D99B"/>' +
+            '<circle cx="70" cy="24" r="20" fill="#e67e22" stroke="white" stroke-width="2.5"/>' +
+            '<rect x="63" y="20" width="14" height="12" rx="2" fill="white"/>' +
+            '<path d="M65 20v-4a5 5 0 0 1 10 0v4" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/>' +
+            '<circle cx="70" cy="26" r="2" fill="#e67e22"/>' +
+          '</svg>' +
+        '</div>' +
       '</div>' +
     '</section>';
   }
@@ -161,20 +196,38 @@
   function slide10() {
     return '<section class="slide" data-section="part1" data-title="ケース③：SaaS規約でデータがAI学習に使われた" data-notes="（フック）3つ目は、今特に気をつけてほしいケースです。業務ツールとして導入したSaaSの利用規約に、こう書いてあった。&#39;サービス改善・AI学習に利用する場合がある&#39;。（少し間）入力した顧客情報や社内文書が、AI学習のデータとして使われていた——気づいたのは、しばらく使い始めてからです。（少し間）無料プランほど、この条項が含まれやすい傾向があります。また、利用規約の&#39;改正&#39;で後から追加されることもある。（接続）ツールを入れる前に、データの取り扱い条項をAIで確認する習慣——これが今、一番リターンが大きい使い方だと思っています。">' +
       H('ケース③：SaaS規約でデータがAI学習に使われた') +
-      '<div class="slide-content">' +
-        '<div class="s-risk-list">' +
-          '<div class="s-risk-item">' +
-            '<div class="s-risk-header"><span class="s-risk-badge high">実際のケース</span><span class="s-risk-title">SaaS利用規約 / 業務ツール導入</span></div>' +
-            '<div class="s-risk-body">' +
-              '「サービス改善・AI学習に利用する場合がある」<br>入力した顧客情報・社内文書が学習データに使われていた。' +
-              '<div class="s-risk-proposal">見るべき条項：「データの利用目的」「AIトレーニング」への言及</div>' +
+      '<div class="slide-content" style="flex-direction:row;align-items:center;gap:2.5cqw;">' +
+        '<div style="flex:1;display:flex;flex-direction:column;gap:1cqw;">' +
+          '<div class="s-risk-list">' +
+            '<div class="s-risk-item">' +
+              '<div class="s-risk-header"><span class="s-risk-badge high">実際のケース</span><span class="s-risk-title">SaaS利用規約 / 業務ツール導入</span></div>' +
+              '<div class="s-risk-body">' +
+                '「サービス改善・AI学習に利用する場合がある」<br>入力した顧客情報・社内文書が学習データに使われていた。' +
+                '<div class="s-risk-proposal">見るべき条項：「データの利用目的」「AIトレーニング」への言及</div>' +
+              '</div>' +
             '</div>' +
           '</div>' +
+          '<ul class="s-list">' +
+            '<li class="s-list-arrow">利用規約の「改正」で後から追加されることもある</li>' +
+            '<li class="s-list-arrow">無料プランほどこの条項が含まれやすい</li>' +
+          '</ul>' +
         '</div>' +
-        '<ul class="s-list" style="margin-top:1cqw;">' +
-          '<li class="s-list-arrow">利用規約の「改正」で後から追加されることもある</li>' +
-          '<li class="s-list-arrow">無料プランほどこの条項が含まれやすい</li>' +
-        '</ul>' +
+        '<div style="width:12cqw;flex-shrink:0;opacity:.9;">' +
+          '<svg viewBox="0 0 88 108" fill="none" style="width:100%;height:auto;">' +
+            '<rect x="8" y="4" width="62" height="83" rx="6" fill="#f8fdf0" stroke="#A6BE54" stroke-width="2"/>' +
+            '<path d="M52 4L70 22H52V4z" fill="#E8F1D8"/>' +
+            '<path d="M52 4L70 22" stroke="#A6BE54" stroke-width="1.5"/>' +
+            '<rect x="18" y="30" width="36" height="3" rx="1.5" fill="#C7D99B"/>' +
+            '<rect x="18" y="38" width="36" height="3" rx="1.5" fill="#C7D99B"/>' +
+            '<rect x="18" y="46" width="28" height="3" rx="1.5" fill="#C7D99B"/>' +
+            '<rect x="18" y="55" width="40" height="6" rx="2" fill="#e8f4fe" stroke="#38B6FF" stroke-width="1"/>' +
+            '<rect x="18" y="66" width="32" height="3" rx="1.5" fill="#C7D99B"/>' +
+            '<circle cx="70" cy="24" r="20" fill="#38B6FF" stroke="white" stroke-width="2.5"/>' +
+            '<line x1="70" y1="14" x2="70" y2="27" stroke="white" stroke-width="2.5" stroke-linecap="round"/>' +
+            '<polyline points="65,20 70,14 75,20" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>' +
+            '<path d="M62 31a8 8 0 0 1 16 0" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/>' +
+          '</svg>' +
+        '</div>' +
       '</div>' +
     '</section>';
   }
@@ -193,7 +246,27 @@
   function slide12() {
     return '<section class="slide" data-section="part1" data-title="AIの立ち位置" data-notes="（落ち着いて要点）今日の話は、AIがあれば弁護士は不要——そういう話ではありません。重要な契約書は弁護士に確認していただくべきです。（少し間）ただ現実として、毎月届くSaaSの利用規約や、取引先から送られてくる業務委託契約——これを都度弁護士に相談するのは、コストとスピードの面で難しい。（少し間）AIの立ち位置はこうです。弁護士に相談するかどうかを判断するための、一次確認の道具。（接続）判断を代わりにやってもらうのではなく、判断の材料を5分で揃えてもらう。これが今日の使い方です。">' +
       H('AIの立ち位置') +
-      '<div class="slide-content">' +
+      '<div class="slide-content" style="gap:.7cqw;">' +
+        '<svg viewBox="0 0 500 54" fill="none" style="width:100%;height:7cqw;flex-shrink:0;">' +
+          '<rect x="0" y="7" width="78" height="40" rx="5" fill="#E8F1D8" stroke="#6F911D" stroke-width="1.5"/>' +
+          '<text x="39" y="33" text-anchor="middle" font-size="14" fill="#5E791A" font-weight="700" font-family="sans-serif">書類</text>' +
+          '<path d="M80 27L108 27" stroke="#A6BE54" stroke-width="2"/>' +
+          '<polygon points="106,23 114,27 106,31" fill="#A6BE54"/>' +
+          '<rect x="116" y="7" width="100" height="40" rx="5" fill="#E8F1D8" stroke="#6F911D" stroke-width="1.5"/>' +
+          '<text x="166" y="24" text-anchor="middle" font-size="12" fill="#5E791A" font-weight="700" font-family="sans-serif">AI</text>' +
+          '<text x="166" y="40" text-anchor="middle" font-size="10" fill="#6F911D" font-family="sans-serif">一次確認（5〜10分）</text>' +
+          '<path d="M218 27L246 27" stroke="#A6BE54" stroke-width="2"/>' +
+          '<polygon points="244,23 252,27 244,31" fill="#A6BE54"/>' +
+          '<rect x="254" y="7" width="110" height="40" rx="5" fill="#E8F1D8" stroke="#6F911D" stroke-width="1.5"/>' +
+          '<text x="309" y="24" text-anchor="middle" font-size="12" fill="#5E791A" font-weight="700" font-family="sans-serif">自分で判断</text>' +
+          '<text x="309" y="40" text-anchor="middle" font-size="10" fill="#6F911D" font-family="sans-serif">弁護士に相談するか？</text>' +
+          '<path d="M366 27L390 27" stroke="#FABE00" stroke-width="2" stroke-dasharray="4 3"/>' +
+          '<polygon points="388,23 396,27 388,31" fill="#FABE00"/>' +
+          '<text x="378" y="20" text-anchor="middle" font-size="9" fill="#aaa" font-family="sans-serif">必要なら</text>' +
+          '<rect x="398" y="7" width="102" height="40" rx="5" fill="#fffbeb" stroke="#FABE00" stroke-width="1.5"/>' +
+          '<text x="449" y="24" text-anchor="middle" font-size="12" fill="#a07800" font-weight="700" font-family="sans-serif">弁護士</text>' +
+          '<text x="449" y="40" text-anchor="middle" font-size="10" fill="#a07800" font-family="sans-serif">専門判断</text>' +
+        '</svg>' +
         '<div class="s-compare">' +
           '<div class="s-compare-col neutral">' +
             '<div class="s-compare-badge">弁護士</div>' +
@@ -248,14 +321,14 @@
       '<div class="slide-content">' +
         '<div class="s-point-list">' +
           '<div class="s-point-row">' +
-            '<div class="s-point-badge">①</div>' +
+            '<div class="s-point-badge"><svg viewBox="0 0 24 24" style="width:55%;height:55%;" fill="white"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div>' +
             '<div class="s-point-content">' +
               '<div class="s-point-title">マスキング（機密情報は伏せてから入力）</div>' +
               '<div class="s-point-desc">会社名→A社 ／ 金額→[契約金額] ／ 日付→[契約期限]<br>慣れれば1〜2分で完了</div>' +
             '</div>' +
           '</div>' +
           '<div class="s-point-row">' +
-            '<div class="s-point-badge">②</div>' +
+            '<div class="s-point-badge"><svg viewBox="0 0 24 24" style="width:55%;height:55%;" fill="white"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg></div>' +
             '<div class="s-point-content">' +
               '<div class="s-point-title">元の文書で確認（AIの指摘を鵜呑みにしない）</div>' +
               '<div class="s-point-desc">「第5条に書いてある」と言われたら実際に第5条を開く<br>ハルシネーション：誤情報を自信ありげに提示する特性</div>' +
@@ -271,10 +344,10 @@
       H('安全で効率的な使い方の流れ') +
       '<div class="slide-content">' +
         '<div class="s-flow">' +
-          '<div class="s-flow-step"><div class="s-flow-num">1</div><div class="s-flow-label">マスキング</div><div class="s-flow-desc">会社名・金額・日付を置き換え</div></div>' +
-          '<div class="s-flow-step"><div class="s-flow-num">2</div><div class="s-flow-label">AIに確認</div><div class="s-flow-desc">状況と目的をプロンプトで伝える</div></div>' +
-          '<div class="s-flow-step"><div class="s-flow-num">3</div><div class="s-flow-label">元文書で照合</div><div class="s-flow-desc">指摘された条番号を自分で確認</div></div>' +
-          '<div class="s-flow-step"><div class="s-flow-num">4</div><div class="s-flow-label">必要なら専門家へ</div><div class="s-flow-desc">相談内容が具体的な状態で臨む</div></div>' +
+          '<div class="s-flow-step"><div class="s-flow-num">1</div><svg viewBox="0 0 24 24" style="width:2.8cqw;height:2.8cqw;margin:.4cqw 0;" fill="#6F911D"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1 1 0 0 0 0-1.41l-2.34-2.34a1 1 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg><div class="s-flow-label">マスキング</div><div class="s-flow-desc">会社名・金額・日付を置き換え</div></div>' +
+          '<div class="s-flow-step"><div class="s-flow-num">2</div><svg viewBox="0 0 24 24" style="width:2.8cqw;height:2.8cqw;margin:.4cqw 0;" fill="#6F911D"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg><div class="s-flow-label">AIに確認</div><div class="s-flow-desc">状況と目的をプロンプトで伝える</div></div>' +
+          '<div class="s-flow-step"><div class="s-flow-num">3</div><svg viewBox="0 0 24 24" style="width:2.8cqw;height:2.8cqw;margin:.4cqw 0;" fill="#6F911D"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg><div class="s-flow-label">元文書で照合</div><div class="s-flow-desc">指摘された条番号を自分で確認</div></div>' +
+          '<div class="s-flow-step"><div class="s-flow-num">4</div><svg viewBox="0 0 24 24" style="width:2.8cqw;height:2.8cqw;margin:.4cqw 0;" fill="#6F911D"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg><div class="s-flow-label">必要なら専門家へ</div><div class="s-flow-desc">相談内容が具体的な状態で臨む</div></div>' +
         '</div>' +
       '</div>' +
     '</section>';
@@ -621,7 +694,18 @@
         '<p class="s-metric-lead">月10件の書類確認をAIで効率化すると</p>' +
         '<div class="s-metric-value">月4〜5時間</div>' +
         '<p class="s-metric-desc">確認作業の削減 ＋ チェック漏れリスクの大幅低下</p>' +
-        '<p class="s-metric-source">1件30分→5分換算 ／ リスク回避1件で300万円超の損失防止も（ケース次第）</p>' +
+        '<div style="display:flex;flex-direction:column;gap:.5cqw;margin-top:1.2cqw;width:38cqw;">' +
+          '<div style="display:flex;align-items:center;gap:.8cqw;">' +
+            '<span style="font-size:1.2cqw;color:rgba(255,255,255,.45);width:5.5cqw;text-align:right;flex-shrink:0;">今まで 30分</span>' +
+            '<div style="flex:1;height:1.6cqw;background:rgba(192,57,43,.55);border-radius:.4cqw;"></div>' +
+          '</div>' +
+          '<div style="display:flex;align-items:center;gap:.8cqw;">' +
+            '<span style="font-size:1.2cqw;color:rgba(255,255,255,.8);width:5.5cqw;text-align:right;flex-shrink:0;">AI後 5分</span>' +
+            '<div style="width:16.7%;height:1.6cqw;background:#FABE00;border-radius:.4cqw;"></div>' +
+            '<span style="font-size:1.1cqw;color:rgba(255,255,255,.5);margin-left:.4cqw;">▲83%削減</span>' +
+          '</div>' +
+        '</div>' +
+        '<p class="s-metric-source" style="margin-top:.8cqw;">1件30分→5分換算 ／ リスク回避1件で300万円超の損失防止も（ケース次第）</p>' +
       '</div>' +
     '</section>';
   }
