@@ -35,13 +35,10 @@
       H('今の状況——思い当たりませんか') +
       '<div class="slide-content">' +
         '<ul class="s-list">' +
-          '<li class="s-list-head">【現場あるある】</li>' +
           '<li class="s-list-arrow">取引先から来た契約書、「いつものやつ」と思ってほぼ読まずにサイン</li>' +
           '<li class="s-list-arrow">SaaSの利用規約、同意ボタンを迷わず押す</li>' +
           '<li class="s-list-arrow">「何かおかしい気がする」と思いつつ、確認する時間が取れない</li>' +
-          '<li class="s-list-head">【経営者・意思決定者から見ると】</li>' +
           '<li class="s-list-arrow">問題が起きてから弁護士に相談すると、初回だけで1〜3万円＋時間</li>' +
-          '<li class="s-list-arrow">取引先との関係修復は、費用以上のコストがかかることもある</li>' +
           '<li class="s-list-callout">「確認する時間がない」問題を、今日まるごと解決します</li>' +
         '</ul>' +
       '</div>' +
@@ -236,12 +233,9 @@
       H('チェックすべき書類の全体地図') +
       '<div class="slide-content">' +
         '<ul class="s-list">' +
-          '<li class="s-list-head">書類①：契約書（業務委託・NDA）</li>' +
-          '<li class="s-list-sub">→ 報酬・損害賠償・解除条件・知財帰属</li>' +
-          '<li class="s-list-head">書類②：利用規約（SaaS・外部サービス）</li>' +
-          '<li class="s-list-sub">→ データの利用・損害免責・解約後のデータ</li>' +
-          '<li class="s-list-head">書類③：自社のプライバシーポリシー</li>' +
-          '<li class="s-list-sub">→ 利用目的・第三者提供・開示請求手続き</li>' +
+          '<li class="s-list-head">書類① 契約書（業務委託・NDA）<span style="font-weight:400;color:var(--c-text-sub);font-size:.9em;"> ／ 報酬・損害賠償・解除条件・知財帰属</span></li>' +
+          '<li class="s-list-head">書類② 利用規約（SaaS・外部サービス）<span style="font-weight:400;color:var(--c-text-sub);font-size:.9em;"> ／ データ利用・損害免責・解約後のデータ</span></li>' +
+          '<li class="s-list-head">書類③ 自社のプライバシーポリシー<span style="font-weight:400;color:var(--c-text-sub);font-size:.9em;"> ／ 利用目的・第三者提供・開示請求手続き</span></li>' +
           '<li class="s-list-callout">全部覚えなくていい。プロンプトテンプレートに盛り込んであります</li>' +
         '</ul>' +
       '</div>' +
@@ -252,14 +246,22 @@
     return '<section class="slide" data-section="part1" data-title="AIを安全に使う 2つのルール" data-notes="（フック）使い始める前に、2つだけ守っていただきたいことがあります。（少し間）ルール1：機密情報は伏せてから入力する。会社名・金額・日付はダミーに置き換える。これをマスキングと呼びます。慣れれば1〜2分です。（少し間）ルール2：AIの指摘は必ず元の文書で確認する。AIは誤った情報を自信ありげに提示することがあります——ハルシネーションと呼ばれる特性です。&#39;第5条に書かれています&#39;と言われたら、実際に第5条を開いて確認する。（接続）この2つだけ守れば、あとは使いながら慣れていただけます。">' +
       H('AIを安全に使う 2つのルール') +
       '<div class="slide-content">' +
-        '<ul class="s-list">' +
-          '<li class="s-list-head">ルール① マスキング（機密情報は伏せてから入力）</li>' +
-          '<li class="s-list-sub">会社名→A社 ／ 個人名→[担当者名] ／ 金額→[契約金額] ／ 日付→[契約期限]</li>' +
-          '<li class="s-list-sub">慣れれば1〜2分。置き換えを戻して元文書の該当箇所を確認する流れ</li>' +
-          '<li class="s-list-head">ルール② 元の文書で確認（AIの指摘を鵜呑みにしない）</li>' +
-          '<li class="s-list-sub">ハルシネーション：誤った情報を自信ありげに提示する特性</li>' +
-          '<li class="s-list-sub">「第5条に上限が書かれています」→ 実際に第5条を確認する</li>' +
-        '</ul>' +
+        '<div class="s-point-list">' +
+          '<div class="s-point-row">' +
+            '<div class="s-point-badge">①</div>' +
+            '<div class="s-point-content">' +
+              '<div class="s-point-title">マスキング（機密情報は伏せてから入力）</div>' +
+              '<div class="s-point-desc">会社名→A社 ／ 金額→[契約金額] ／ 日付→[契約期限]<br>慣れれば1〜2分で完了</div>' +
+            '</div>' +
+          '</div>' +
+          '<div class="s-point-row">' +
+            '<div class="s-point-badge">②</div>' +
+            '<div class="s-point-content">' +
+              '<div class="s-point-title">元の文書で確認（AIの指摘を鵜呑みにしない）</div>' +
+              '<div class="s-point-desc">「第5条に書いてある」と言われたら実際に第5条を開く<br>ハルシネーション：誤情報を自信ありげに提示する特性</div>' +
+            '</div>' +
+          '</div>' +
+        '</div>' +
       '</div>' +
     '</section>';
   }
@@ -313,11 +315,6 @@
     return '<section class="slide" data-section="part2" data-title="実演を始める前に：状況確認" data-notes="（フック）まず3点だけ確認させてください。（少し間）確認①、普段、契約書を&#39;受け取る&#39;ことが多いですか、それとも&#39;渡す&#39;ことが多いですか？（少し間）確認②、受け取る場合、条件の交渉はできますか？のむしかない？（少し間）確認③、今日試したい書類はありますか？なければサンプルを使います。（接続）状況に応じて、今日はA・B・Cの3ルートでお見せします。">' +
       H('実演を始める前に：状況確認') +
       '<div class="slide-content">' +
-        '<ul class="s-list">' +
-          '<li>確認① 普段、契約書を「受け取る」「渡す」どちらが多いですか？</li>' +
-          '<li>確認② 受け取る場合：条件の交渉はできますか？のむしかない？</li>' +
-          '<li>確認③ 今日試したい書類はありますか？（なければサンプルを使います）</li>' +
-        '</ul>' +
         '<div class="s-routes">' +
           '<div class="s-route-card"><div class="s-route-label">ROUTE A</div><div class="s-route-title">受け取る × 交渉できる</div><div class="s-route-desc">不利条項の洗い出し＋修正案</div></div>' +
           '<div class="s-route-card"><div class="s-route-label">ROUTE B</div><div class="s-route-title">受け取る × のむしかない</div><div class="s-route-desc">リスク優先度＋社内対策</div></div>' +
@@ -372,15 +369,11 @@
     return '<section class="slide" data-section="part2" data-title="AI出力の読み解き方（3つの着目点）" data-notes="（フック）知財帰属の条項も確認しましょう。AIがこの条項への指摘を弱めにしか出していない場合があります。重大な条項でも、AIが強調しないことはある——これがハルシネーション対策の習慣です。（接続）この3つの着目点を覚えておいてください。">' +
       H('AI出力の読み解き方（3つの着目点）') +
       '<div class="slide-content">' +
-        '<ul class="s-list">' +
-          '<li class="s-list-head">着目① 最初に挙げてきた条項</li>' +
-          '<li class="s-list-sub">AIがリスクの高い順で出している。先頭に注目</li>' +
-          '<li class="s-list-head">着目② 修正案の内容</li>' +
-          '<li class="s-list-sub">交渉のたたき台として使う（そのまま送らない）</li>' +
-          '<li class="s-list-head">着目③ AIが見落としている可能性への対処</li>' +
-          '<li class="s-list-sub">重大な条項でもAIが強調しないことがある</li>' +
-          '<li class="s-list-sub">指摘された条番号は必ず元の文書で照合する</li>' +
-        '</ul>' +
+        '<div class="s-point-list">' +
+          '<div class="s-point-row"><div class="s-point-badge">①</div><div class="s-point-content"><div class="s-point-title">最初に挙げてきた条項</div><div class="s-point-desc">AIがリスクの高い順で出している。先頭に注目</div></div></div>' +
+          '<div class="s-point-row"><div class="s-point-badge">②</div><div class="s-point-content"><div class="s-point-title">修正案の内容</div><div class="s-point-desc">交渉のたたき台として使う。そのまま送らない</div></div></div>' +
+          '<div class="s-point-row"><div class="s-point-badge">③</div><div class="s-point-content"><div class="s-point-title">条番号は必ず元の文書で照合</div><div class="s-point-desc">重大条項でもAIが見落とすことがある</div></div></div>' +
+        '</div>' +
       '</div>' +
     '</section>';
   }
