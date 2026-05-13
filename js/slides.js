@@ -247,25 +247,25 @@
     return '<section class="slide" data-section="part1" data-title="AIの立ち位置" data-notes="（落ち着いて要点）今日の話は、AIがあれば弁護士は不要——そういう話ではありません。重要な契約書は弁護士に確認していただくべきです。（少し間）ただ現実として、毎月届くSaaSの利用規約や、取引先から送られてくる業務委託契約——これを都度弁護士に相談するのは、コストとスピードの面で難しい。（少し間）AIの立ち位置はこうです。弁護士に相談するかどうかを判断するための、一次確認の道具。（接続）判断を代わりにやってもらうのではなく、判断の材料を5分で揃えてもらう。これが今日の使い方です。">' +
       H('AIの立ち位置') +
       '<div class="slide-content" style="gap:.7cqw;">' +
-        '<svg viewBox="0 0 500 54" fill="none" style="width:100%;height:7cqw;flex-shrink:0;">' +
-          '<rect x="0" y="7" width="78" height="40" rx="5" fill="#E8F1D8" stroke="#6F911D" stroke-width="1.5"/>' +
-          '<text x="39" y="33" text-anchor="middle" font-size="14" fill="#5E791A" font-weight="700" font-family="sans-serif">書類</text>' +
-          '<path d="M80 27L108 27" stroke="#A6BE54" stroke-width="2"/>' +
-          '<polygon points="106,23 114,27 106,31" fill="#A6BE54"/>' +
-          '<rect x="116" y="7" width="100" height="40" rx="5" fill="#E8F1D8" stroke="#6F911D" stroke-width="1.5"/>' +
-          '<text x="166" y="24" text-anchor="middle" font-size="12" fill="#5E791A" font-weight="700" font-family="sans-serif">AI</text>' +
-          '<text x="166" y="40" text-anchor="middle" font-size="10" fill="#6F911D" font-family="sans-serif">一次確認（5〜10分）</text>' +
-          '<path d="M218 27L246 27" stroke="#A6BE54" stroke-width="2"/>' +
-          '<polygon points="244,23 252,27 244,31" fill="#A6BE54"/>' +
-          '<rect x="254" y="7" width="110" height="40" rx="5" fill="#E8F1D8" stroke="#6F911D" stroke-width="1.5"/>' +
-          '<text x="309" y="24" text-anchor="middle" font-size="12" fill="#5E791A" font-weight="700" font-family="sans-serif">自分で判断</text>' +
-          '<text x="309" y="40" text-anchor="middle" font-size="10" fill="#6F911D" font-family="sans-serif">弁護士に相談するか？</text>' +
-          '<path d="M366 27L390 27" stroke="#FABE00" stroke-width="2" stroke-dasharray="4 3"/>' +
-          '<polygon points="388,23 396,27 388,31" fill="#FABE00"/>' +
-          '<text x="378" y="20" text-anchor="middle" font-size="9" fill="#aaa" font-family="sans-serif">必要なら</text>' +
-          '<rect x="398" y="7" width="102" height="40" rx="5" fill="#fffbeb" stroke="#FABE00" stroke-width="1.5"/>' +
-          '<text x="449" y="24" text-anchor="middle" font-size="12" fill="#a07800" font-weight="700" font-family="sans-serif">弁護士</text>' +
-          '<text x="449" y="40" text-anchor="middle" font-size="10" fill="#a07800" font-family="sans-serif">専門判断</text>' +
+        '<svg viewBox="0 0 500 70" fill="none" style="width:100%;height:14cqw;flex-shrink:0;">' +
+          '<rect x="0" y="9" width="78" height="52" rx="5" fill="#E8F1D8" stroke="#6F911D" stroke-width="1.5"/>' +
+          '<text x="39" y="39" text-anchor="middle" font-size="18" fill="#5E791A" font-weight="700" font-family="sans-serif">書類</text>' +
+          '<path d="M80 35L108 35" stroke="#A6BE54" stroke-width="2"/>' +
+          '<polygon points="106,31 114,35 106,39" fill="#A6BE54"/>' +
+          '<rect x="116" y="9" width="100" height="52" rx="5" fill="#E8F1D8" stroke="#6F911D" stroke-width="1.5"/>' +
+          '<text x="166" y="29" text-anchor="middle" font-size="15" fill="#5E791A" font-weight="700" font-family="sans-serif">AI</text>' +
+          '<text x="166" y="47" text-anchor="middle" font-size="13" fill="#6F911D" font-family="sans-serif">一次確認（5〜10分）</text>' +
+          '<path d="M218 35L246 35" stroke="#A6BE54" stroke-width="2"/>' +
+          '<polygon points="244,31 252,35 244,39" fill="#A6BE54"/>' +
+          '<rect x="254" y="9" width="110" height="52" rx="5" fill="#E8F1D8" stroke="#6F911D" stroke-width="1.5"/>' +
+          '<text x="309" y="29" text-anchor="middle" font-size="14" fill="#5E791A" font-weight="700" font-family="sans-serif">自分で判断</text>' +
+          '<text x="309" y="47" text-anchor="middle" font-size="13" fill="#6F911D" font-family="sans-serif">弁護士に相談するか？</text>' +
+          '<path d="M366 35L390 35" stroke="#FABE00" stroke-width="2" stroke-dasharray="4 3"/>' +
+          '<polygon points="388,31 396,35 388,39" fill="#FABE00"/>' +
+          '<text x="378" y="24" text-anchor="middle" font-size="12" fill="#aaa" font-family="sans-serif">必要なら</text>' +
+          '<rect x="398" y="9" width="102" height="52" rx="5" fill="#fffbeb" stroke="#FABE00" stroke-width="1.5"/>' +
+          '<text x="449" y="29" text-anchor="middle" font-size="14" fill="#a07800" font-weight="700" font-family="sans-serif">弁護士</text>' +
+          '<text x="449" y="47" text-anchor="middle" font-size="13" fill="#a07800" font-family="sans-serif">専門判断</text>' +
         '</svg>' +
         '<div class="s-compare">' +
           '<div class="s-compare-col neutral">' +

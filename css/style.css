@@ -95,7 +95,7 @@ body {
 }
 
 .slide-cover-tag {
-  font-size: calc(1.3cqw * var(--tz));
+  font-size: calc(1.6cqw * var(--tz));
   color: rgba(255,255,255,.65);
   letter-spacing: .12em;
   margin-bottom: .5cqw;
@@ -119,13 +119,13 @@ body {
 }
 
 .slide-cover-sub {
-  font-size: calc(2.2cqw * var(--tz));
+  font-size: calc(3.5cqw * var(--tz));
   font-weight: 700;
   color: var(--c-primary);
 }
 
 .slide-cover-meta {
-  font-size: calc(1.3cqw * var(--tz));
+  font-size: calc(2.0cqw * var(--tz));
   color: var(--c-text-sub);
   margin-top: .5cqw;
 }
