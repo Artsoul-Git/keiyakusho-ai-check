@@ -106,11 +106,11 @@
   /* --- PART 01: 座学 (slides 07–17) --- */
 
   function slide07() {
-    return '<section class="slide slide-section" data-section="part1" data-title="PART 01 座学ブロック" data-notes="では、始めましょう。最初のパートは座学です。AIを使う前に、まず知っておいてほしいことをお伝えします。">' +
+    return '<section class="slide slide-section" data-section="part1" data-title="PART 01 基礎知識" data-notes="では、始めましょう。最初のパートは座学です。AIを使う前に、まず知っておいてほしいことをお伝えします。">' +
       '<div class="slide-content">' +
         '<div class="s-section-accent-bar"></div>' +
         '<div class="s-section-chapter">PART 01</div>' +
-        '<h1 class="s-section-title">座学ブロック</h1>' +
+        '<h1 class="s-section-title">基礎知識</h1>' +
         '<p class="s-section-lead">AIを使う前に知っておくこと</p>' +
       '</div>' +
     '</section>';
@@ -257,15 +257,16 @@
           '<text x="174" y="50" text-anchor="middle" font-size="11" fill="#6F911D" font-family="sans-serif">一次確認（5〜10分）</text>' +
           '<path d="M240 38L266 38" stroke="#A6BE54" stroke-width="2"/>' +
           '<polygon points="264,34 272,38 264,42" fill="#A6BE54"/>' +
-          '<rect x="268" y="8" width="148" height="61" rx="5" fill="#E8F1D8" stroke="#6F911D" stroke-width="1.5"/>' +
-          '<text x="342" y="30" text-anchor="middle" font-size="14" fill="#5E791A" font-weight="700" font-family="sans-serif">自分で判断</text>' +
-          '<text x="342" y="50" text-anchor="middle" font-size="11" fill="#6F911D" font-family="sans-serif">弁護士に相談するか？</text>' +
-          '<path d="M418 38L446 38" stroke="#FABE00" stroke-width="2" stroke-dasharray="4 3"/>' +
-          '<polygon points="444,34 452,38 444,42" fill="#FABE00"/>' +
-          '<text x="432" y="28" text-anchor="middle" font-size="10" fill="#aaa" font-family="sans-serif">必要なら</text>' +
-          '<rect x="454" y="8" width="186" height="61" rx="5" fill="#fffbeb" stroke="#FABE00" stroke-width="1.5"/>' +
-          '<text x="547" y="30" text-anchor="middle" font-size="16" fill="#a07800" font-weight="700" font-family="sans-serif">弁護士</text>' +
-          '<text x="547" y="50" text-anchor="middle" font-size="11" fill="#a07800" font-family="sans-serif">専門判断</text>' +
+          '<rect x="268" y="8" width="140" height="61" rx="5" fill="#E8F1D8" stroke="#6F911D" stroke-width="1.5"/>' +
+          '<text x="338" y="30" text-anchor="middle" font-size="14" fill="#5E791A" font-weight="700" font-family="sans-serif">自分で判断</text>' +
+          '<text x="338" y="50" text-anchor="middle" font-size="11" fill="#6F911D" font-family="sans-serif">弁護士に相談するか？</text>' +
+          '<path d="M410 38L450 38" stroke="#FABE00" stroke-width="2" stroke-dasharray="4 3"/>' +
+          '<polygon points="448,34 456,38 448,42" fill="#FABE00"/>' +
+          '<rect x="410" y="20" width="42" height="14" rx="3" fill="white"/>' +
+          '<text x="431" y="30" text-anchor="middle" font-size="10" fill="#999" font-family="sans-serif">必要なら</text>' +
+          '<rect x="456" y="8" width="184" height="61" rx="5" fill="#fffbeb" stroke="#FABE00" stroke-width="1.5"/>' +
+          '<text x="548" y="30" text-anchor="middle" font-size="16" fill="#a07800" font-weight="700" font-family="sans-serif">弁護士</text>' +
+          '<text x="548" y="50" text-anchor="middle" font-size="11" fill="#a07800" font-family="sans-serif">専門判断</text>' +
         '</svg>' +
         '<div class="s-compare">' +
           '<div class="s-compare-col neutral">' +
