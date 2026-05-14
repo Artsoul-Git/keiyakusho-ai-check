@@ -1,0 +1,473 @@
+/* =============================================
+   Editor Sidebar — Canva-like tool panel
+   ============================================= */
+
+/* When edit mode is active, shift the slide stage to the right */
+body.edit-mode .slide-stage {
+  left: 252px;
+  transition: left 0.25s ease;
+}
+body.edit-mode .section-nav {
+  left: calc(50% + 126px);
+  transition: left 0.25s ease;
+}
+
+/* ─── Sidebar container ─── */
+.editor-sidebar {
+  position: fixed;
+  top: 0;
+  left: -252px;
+  width: 252px;
+  height: 100vh;
+  background: #1c1c22;
+  border-right: 1px solid #2e2e38;
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  transition: left 0.25s ease;
+  font-family: 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+  overflow: hidden;
+}
+
+body.edit-mode .editor-sidebar {
+  left: 0;
+}
+
+/* ─── Header ─── */
+.est-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-bottom: 1px solid #2e2e38;
+  flex-shrink: 0;
+}
+
+.est-header-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #c0c0c8;
+  letter-spacing: 0.06em;
+}
+
+.est-header-tool {
+  width: 28px;
+  height: 28px;
+  border-radius: 5px;
+  border: 1px solid #3a3a46;
+  background: #2a2a34;
+  color: #aaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.15s;
+  user-select: none;
+}
+
+.est-header-tool:hover { background: #36363f; color: #e0e0e0; }
+.est-header-tool.active { background: #3a4e10; border-color: #6f911d; color: #a8c54a; }
+
+/* ─── Tabs ─── */
+.est-tabs {
+  display: flex;
+  border-bottom: 1px solid #2e2e38;
+  flex-shrink: 0;
+}
+
+.est-tab {
+  flex: 1;
+  padding: 10px 4px 8px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: #777;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  line-height: 1.5;
+  transition: color 0.15s, background 0.15s, border-color 0.15s;
+  font-family: inherit;
+}
+
+.est-tab small { font-size: 9px; font-weight: 400; }
+.est-tab:hover { color: #bbb; background: #25252f; }
+.est-tab.active { color: #a8c54a; border-bottom-color: #a8c54a; }
+
+/* ─── Panel content area ─── */
+.est-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.est-content::-webkit-scrollbar { width: 4px; }
+.est-content::-webkit-scrollbar-track { background: transparent; }
+.est-content::-webkit-scrollbar-thumb { background: #3a3a46; border-radius: 2px; }
+
+.est-panel {
+  display: none;
+  padding: 14px;
+}
+
+.est-panel.active { display: block; }
+
+/* ─── Action button (Add Text / etc.) ─── */
+.est-action-btn {
+  width: 100%;
+  padding: 10px 14px;
+  background: #6f911d;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s;
+  letter-spacing: 0.02em;
+}
+
+.est-action-btn:hover { background: #5e791a; }
+.est-action-btn:active { background: #4f6415; }
+
+/* ─── Divider ─── */
+.est-divider {
+  height: 1px;
+  background: #2e2e38;
+  margin: 12px 0;
+}
+
+/* ─── Section label ─── */
+.est-section-label {
+  font-size: 9px;
+  font-weight: 700;
+  color: #666;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  margin-top: 4px;
+}
+
+/* ─── Property rows ─── */
+.est-prop-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.est-prop-label {
+  font-size: 11px;
+  color: #999;
+  min-width: 52px;
+  flex-shrink: 0;
+}
+
+.est-prop-row select {
+  flex: 1;
+  background: #26262f;
+  border: 1px solid #3e3e4a;
+  color: #d0d0d8;
+  font-size: 11px;
+  padding: 5px 7px;
+  border-radius: 4px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.est-prop-row select:focus { outline: none; border-color: #6f911d; }
+
+.est-prop-row input[type="color"] {
+  width: 32px;
+  height: 28px;
+  border: 1px solid #3e3e4a;
+  border-radius: 4px;
+  cursor: pointer;
+  background: none;
+  padding: 2px;
+  flex-shrink: 0;
+}
+
+.est-num-input {
+  width: 56px;
+  background: #26262f;
+  border: 1px solid #3e3e4a;
+  color: #d0d0d8;
+  font-size: 11px;
+  padding: 5px 7px;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.est-num-input:focus { outline: none; border-color: #6f911d; }
+
+.est-unit {
+  font-size: 10px;
+  color: #666;
+}
+
+.est-checkbox-label {
+  font-size: 11px;
+  color: #999;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* ─── Format buttons ─── */
+.est-format-btns {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.est-fmt-btn {
+  width: 32px;
+  height: 32px;
+  background: #26262f;
+  border: 1px solid #3e3e4a;
+  color: #c0c0c8;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  transition: background 0.12s, border-color 0.12s;
+}
+
+.est-fmt-btn:hover { background: #32323c; }
+.est-fmt-btn.active { background: #3a4e10; border-color: #6f911d; color: #a8c54a; }
+
+/* ─── Shape grid ─── */
+.est-shape-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.est-shape-btn {
+  background: #26262f;
+  border: 1px solid #3e3e4a;
+  color: #c0c0c8;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 22px;
+  padding: 14px 8px 10px;
+  text-align: center;
+  line-height: 1.2;
+  font-family: inherit;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+}
+
+.est-shape-btn small { font-size: 9px; display: block; margin-top: 4px; font-weight: 400; color: #888; }
+.est-shape-btn:hover { background: #32323c; border-color: #555; color: #e0e0e0; }
+.est-shape-btn.active { background: #3a4e10; border-color: #6f911d; color: #a8c54a; }
+
+/* ─── File upload button ─── */
+.est-file-btn {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background: #26262f;
+  border: 1px dashed #3e3e4a;
+  border-radius: 6px;
+  color: #999;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+  user-select: none;
+}
+
+.est-file-btn:hover { background: #30303a; border-color: #666; color: #ccc; }
+
+/* ─── Hint text ─── */
+.est-hint {
+  font-size: 10px;
+  color: #555;
+  line-height: 1.7;
+  margin-top: 10px;
+}
+
+/* ─── Footer ─── */
+.est-footer {
+  padding: 12px 14px;
+  border-top: 1px solid #2e2e38;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  flex-shrink: 0;
+}
+
+.est-delete-btn {
+  width: 100%;
+  padding: 8px 12px;
+  background: none;
+  border: 1px solid #7a2020;
+  color: #c0392b;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.12s;
+  text-align: center;
+}
+
+.est-delete-btn:hover { background: rgba(192,57,43,0.12); border-color: #c0392b; }
+
+.est-reset-btn {
+  width: 100%;
+  padding: 7px 12px;
+  background: none;
+  border: 1px solid #3a3a46;
+  color: #666;
+  border-radius: 5px;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.12s, color 0.12s;
+  text-align: center;
+}
+
+.est-reset-btn:hover { background: rgba(255,255,255,0.04); color: #999; }
+
+/* =============================================
+   Canvas Overlay (Canva-like objects on slides)
+   ============================================= */
+
+.canvas-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none; /* falls through to contenteditable slide */
+  overflow: hidden;
+}
+
+/* When a placement tool is active, overlay captures clicks */
+body.canvas-tool-active .canvas-overlay {
+  pointer-events: all;
+  cursor: crosshair;
+}
+
+/* Each placed object */
+.canvas-obj {
+  position: absolute;
+  pointer-events: all;
+  cursor: move;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.canvas-obj-inner {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Text object inner */
+.canvas-obj-text {
+  overflow: hidden;
+  word-break: break-word;
+  outline: none;
+  cursor: text;
+  padding: 4px 6px;
+  box-sizing: border-box;
+  min-height: 100%;
+}
+
+/* Image object inner */
+.canvas-obj-image {
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* ─── Selection outline ─── */
+.canvas-obj.selected {
+  outline: 2px solid #38B6FF;
+  outline-offset: 0;
+}
+
+/* ─── Resize handles ─── */
+.rh {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  background: #fff;
+  border: 2px solid #38B6FF;
+  border-radius: 2px;
+  opacity: 0;
+  pointer-events: all;
+  z-index: 12;
+  transition: opacity 0.1s;
+}
+
+.canvas-obj.selected .rh { opacity: 1; }
+
+.rh-nw { top: -5px;             left: -5px;              cursor: nw-resize; }
+.rh-n  { top: -5px;             left: calc(50% - 4.5px); cursor: n-resize;  }
+.rh-ne { top: -5px;             right: -5px;             cursor: ne-resize; }
+.rh-w  { top: calc(50% - 4.5px); left: -5px;             cursor: w-resize;  }
+.rh-e  { top: calc(50% - 4.5px); right: -5px;            cursor: e-resize;  }
+.rh-sw { bottom: -5px;          left: -5px;              cursor: sw-resize; }
+.rh-s  { bottom: -5px;          left: calc(50% - 4.5px); cursor: s-resize;  }
+.rh-se { bottom: -5px;          right: -5px;             cursor: se-resize; }
+
+/* ─── Delete button ─── */
+.obj-delete {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  width: 22px;
+  height: 22px;
+  background: #c0392b;
+  color: #fff;
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 15;
+  line-height: 1;
+  user-select: none;
+  pointer-events: all;
+  font-family: sans-serif;
+}
+
+.canvas-obj.selected .obj-delete { display: flex; }
+
+/* ─── Placement tool cursor & hint ─── */
+body.canvas-tool-active .slide.active {
+  cursor: crosshair;
+}
+
+body.canvas-tool-active .slide-stage::after {
+  content: 'スライドをクリックして配置 (Esc でキャンセル)';
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,.80);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 18px;
+  border-radius: 20px;
+  pointer-events: none;
+  z-index: 200;
+  font-family: 'Noto Sans JP', sans-serif;
+  letter-spacing: 0.03em;
+}

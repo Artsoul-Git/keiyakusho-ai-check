@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>契約書AIチェックセミナー — エディター</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/editor.css">
+  <script src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+</head>
+<body>
+  <div class="slide-stage"></div>
+
+  <nav class="section-nav"></nav>
+
+  <button class="sidebar-toggle" aria-label="メニュー">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="sidebar-backdrop"></div>
+  <aside class="sidebar">
+    <div class="sidebar-title">契約書AIチェックセミナー</div>
+    <div class="sidebar-list"></div>
+  </aside>
+
+  <!-- ===== Canva-like Editor Sidebar ===== -->
+  <div class="editor-sidebar" id="editor-sidebar">
+    <div class="est-header">
+      <span class="est-header-title">編集ツール</span>
+      <div class="est-header-tool" id="est-tool-pointer" title="選択・移動 (V)" data-tool="pointer">↖</div>
+    </div>
+
+    <div class="est-tabs">
+      <button class="est-tab active" data-panel="text">T<br><small>テキスト</small></button>
+      <button class="est-tab" data-panel="shape">▭<br><small>図形</small></button>
+      <button class="est-tab" data-panel="image">⬚<br><small>画像</small></button>
+    </div>
+
+    <div class="est-content">
+
+      <!-- Text panel -->
+      <div class="est-panel active" id="est-panel-text">
+        <button class="est-action-btn" id="est-add-text">＋ テキストボックスを追加</button>
+        <div class="est-divider"></div>
+        <div class="est-section-label">テキスト書式（選択中に適用）</div>
+        <div class="est-prop-row">
+          <span class="est-prop-label">サイズ</span>
+          <select id="est-font-size">
+            <option value="1.5">極小 (1.5cqw)</option>
+            <option value="2">小 (2.0cqw)</option>
+            <option value="2.5" selected>中 (2.5cqw)</option>
+            <option value="3">大 (3.0cqw)</option>
+            <option value="4">特大 (4.0cqw)</option>
+            <option value="5">極大 (5.0cqw)</option>
+          </select>
+        </div>
+        <div class="est-prop-row">
+          <span class="est-prop-label">文字色</span>
+          <input type="color" id="est-text-color" value="#333333">
+        </div>
+        <div class="est-format-btns">
+          <button class="est-fmt-btn" id="est-bold"      title="太字 (Ctrl+B)"><b>B</b></button>
+          <button class="est-fmt-btn" id="est-italic"    title="斜体 (Ctrl+I)"><i>I</i></button>
+          <button class="est-fmt-btn" id="est-underline" title="下線 (Ctrl+U)"><u>U</u></button>
+          <button class="est-fmt-btn" id="est-align-l"   title="左揃え">≡L</button>
+          <button class="est-fmt-btn" id="est-align-c"   title="中央揃え">≡C</button>
+          <button class="est-fmt-btn" id="est-align-r"   title="右揃え">≡R</button>
+        </div>
+        <div class="est-hint">既存スライドのテキストも直接クリックして編集できます</div>
+      </div>
+
+      <!-- Shape panel -->
+      <div class="est-panel" id="est-panel-shape">
+        <div class="est-section-label">クリックして種類を選択→スライドに配置</div>
+        <div class="est-shape-grid">
+          <button class="est-shape-btn" data-shape="rect">▭<br><small>矩形</small></button>
+          <button class="est-shape-btn" data-shape="circle">○<br><small>楕円</small></button>
+          <button class="est-shape-btn" data-shape="line">—<br><small>直線</small></button>
+          <button class="est-shape-btn" data-shape="arrow">→<br><small>矢印</small></button>
+        </div>
+        <div class="est-divider"></div>
+        <div class="est-section-label">スタイル（次に配置する図形に反映）</div>
+        <div class="est-prop-row">
+          <span class="est-prop-label">塗り色</span>
+          <input type="color" id="est-fill-color" value="#a8c54a">
+          <label class="est-checkbox-label">
+            <input type="checkbox" id="est-fill-none"> なし
+          </label>
+        </div>
+        <div class="est-prop-row">
+          <span class="est-prop-label">枠線色</span>
+          <input type="color" id="est-stroke-color" value="#6f911d">
+        </div>
+        <div class="est-prop-row">
+          <span class="est-prop-label">枠線太さ</span>
+          <input type="number" id="est-stroke-width" min="0" max="20" value="2" class="est-num-input">
+          <span class="est-unit">px</span>
+        </div>
+      </div>
+
+      <!-- Image panel -->
+      <div class="est-panel" id="est-panel-image">
+        <div class="est-section-label">スライドに画像を挿入</div>
+        <label class="est-file-btn">
+          ＋ ファイルを選択
+          <input type="file" id="est-image-input" accept="image/*" style="display:none">
+        </label>
+        <div class="est-hint">JPG・PNG・GIF・SVGに対応。<br>選択後、スライド中央に配置されます。<br>ドラッグで移動、ハンドルでリサイズ。</div>
+      </div>
+
+    </div><!-- .est-content -->
+
+    <div class="est-footer">
+      <button class="est-delete-btn" id="est-delete-obj">選択中を削除 (Delete キー)</button>
+      <button class="est-reset-btn"  id="est-reset-objs">このスライドのオブジェクトをリセット</button>
+    </div>
+  </div><!-- .editor-sidebar -->
+
+  <!-- ===== Export / Edit Bar ===== -->
+  <div class="export-bar">
+    <button class="presenter-btn">🎤 プレゼンター</button>
+    <button class="export-pdf">PDF出力</button>
+    <button class="export-pptx">PPTX出力</button>
+    <button class="edit-mode-btn" id="edit-mode-btn">✏️ 編集</button>
+    <div class="edit-toolbar" id="edit-toolbar">
+      <div class="et-sep"></div>
+      <button class="et-btn" id="et-bold"      title="太字"><b>B</b></button>
+      <button class="et-btn et-btn-italic"    id="et-italic"    title="斜体">I</button>
+      <button class="et-btn et-btn-underline" id="et-underline" title="下線">U</button>
+      <label class="et-color-wrap" title="文字色">
+        <span class="et-color-label">A</span>
+        <input type="color" id="et-color" value="#ffffff">
+      </label>
+      <div class="et-sep"></div>
+      <button class="et-btn et-btn-danger" id="et-reset-slide">リセット</button>
+      <span class="et-saved" id="et-saved"></span>
+    </div>
+    <div class="zoom-group">
+      <button class="zoom-out"   title="縮小 (−)">－</button>
+      <span class="zoom-level-display" id="zoom-display">100%</span>
+      <button class="zoom-in"    title="拡大 (+)">＋</button>
+      <button class="zoom-reset" title="リセット">リセット</button>
+    </div>
+  </div>
+
+  <div class="export-overlay">
+    <div class="export-overlay-inner">
+      <div class="export-overlay-label">エクスポート中…</div>
+      <div class="export-progress-bar"><div class="export-progress-fill"></div></div>
+    </div>
+  </div>
+
+  <script src="js/slides.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/editor.js"></script>
+</body>
+</html>
