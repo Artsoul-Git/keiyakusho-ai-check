@@ -246,26 +246,26 @@
   function slide12() {
     return '<section class="slide" data-section="part1" data-title="AIの立ち位置" data-notes="（落ち着いて要点）今日の話は、AIがあれば弁護士は不要——そういう話ではありません。重要な契約書は弁護士に確認していただくべきです。（少し間）ただ現実として、毎月届くSaaSの利用規約や、取引先から送られてくる業務委託契約——これを都度弁護士に相談するのは、コストとスピードの面で難しい。（少し間）AIの立ち位置はこうです。弁護士に相談するかどうかを判断するための、一次確認の道具。（接続）判断を代わりにやってもらうのではなく、判断の材料を5分で揃えてもらう。これが今日の使い方です。">' +
       H('AIの立ち位置') +
-      '<div class="slide-content" style="gap:.7cqw;">' +
-        '<svg viewBox="0 0 500 70" fill="none" style="width:100%;height:14cqw;flex-shrink:0;">' +
-          '<rect x="0" y="9" width="78" height="52" rx="5" fill="#E8F1D8" stroke="#6F911D" stroke-width="1.5"/>' +
-          '<text x="39" y="39" text-anchor="middle" font-size="18" fill="#5E791A" font-weight="700" font-family="sans-serif">書類</text>' +
-          '<path d="M80 35L108 35" stroke="#A6BE54" stroke-width="2"/>' +
-          '<polygon points="106,31 114,35 106,39" fill="#A6BE54"/>' +
-          '<rect x="116" y="9" width="100" height="52" rx="5" fill="#E8F1D8" stroke="#6F911D" stroke-width="1.5"/>' +
-          '<text x="166" y="29" text-anchor="middle" font-size="15" fill="#5E791A" font-weight="700" font-family="sans-serif">AI</text>' +
-          '<text x="166" y="47" text-anchor="middle" font-size="13" fill="#6F911D" font-family="sans-serif">一次確認（5〜10分）</text>' +
-          '<path d="M218 35L246 35" stroke="#A6BE54" stroke-width="2"/>' +
-          '<polygon points="244,31 252,35 244,39" fill="#A6BE54"/>' +
-          '<rect x="254" y="9" width="110" height="52" rx="5" fill="#E8F1D8" stroke="#6F911D" stroke-width="1.5"/>' +
-          '<text x="309" y="29" text-anchor="middle" font-size="14" fill="#5E791A" font-weight="700" font-family="sans-serif">自分で判断</text>' +
-          '<text x="309" y="47" text-anchor="middle" font-size="13" fill="#6F911D" font-family="sans-serif">弁護士に相談するか？</text>' +
-          '<path d="M366 35L390 35" stroke="#FABE00" stroke-width="2" stroke-dasharray="4 3"/>' +
-          '<polygon points="388,31 396,35 388,39" fill="#FABE00"/>' +
-          '<text x="378" y="24" text-anchor="middle" font-size="12" fill="#aaa" font-family="sans-serif">必要なら</text>' +
-          '<rect x="398" y="9" width="102" height="52" rx="5" fill="#fffbeb" stroke="#FABE00" stroke-width="1.5"/>' +
-          '<text x="449" y="29" text-anchor="middle" font-size="14" fill="#a07800" font-weight="700" font-family="sans-serif">弁護士</text>' +
-          '<text x="449" y="47" text-anchor="middle" font-size="13" fill="#a07800" font-family="sans-serif">専門判断</text>' +
+      '<div class="slide-content" style="gap:1.5cqw;">' +
+        '<svg viewBox="0 0 640 77" fill="none" style="width:100%;height:12cqw;flex-shrink:0;">' +
+          '<rect x="0" y="8" width="80" height="61" rx="5" fill="#E8F1D8" stroke="#6F911D" stroke-width="1.5"/>' +
+          '<text x="40" y="43" text-anchor="middle" font-size="18" fill="#5E791A" font-weight="700" font-family="sans-serif">書類</text>' +
+          '<path d="M82 38L108 38" stroke="#A6BE54" stroke-width="2"/>' +
+          '<polygon points="106,34 114,38 106,42" fill="#A6BE54"/>' +
+          '<rect x="110" y="8" width="128" height="61" rx="5" fill="#E8F1D8" stroke="#6F911D" stroke-width="1.5"/>' +
+          '<text x="174" y="30" text-anchor="middle" font-size="16" fill="#5E791A" font-weight="700" font-family="sans-serif">AI</text>' +
+          '<text x="174" y="50" text-anchor="middle" font-size="11" fill="#6F911D" font-family="sans-serif">一次確認（5〜10分）</text>' +
+          '<path d="M240 38L266 38" stroke="#A6BE54" stroke-width="2"/>' +
+          '<polygon points="264,34 272,38 264,42" fill="#A6BE54"/>' +
+          '<rect x="268" y="8" width="148" height="61" rx="5" fill="#E8F1D8" stroke="#6F911D" stroke-width="1.5"/>' +
+          '<text x="342" y="30" text-anchor="middle" font-size="14" fill="#5E791A" font-weight="700" font-family="sans-serif">自分で判断</text>' +
+          '<text x="342" y="50" text-anchor="middle" font-size="11" fill="#6F911D" font-family="sans-serif">弁護士に相談するか？</text>' +
+          '<path d="M418 38L446 38" stroke="#FABE00" stroke-width="2" stroke-dasharray="4 3"/>' +
+          '<polygon points="444,34 452,38 444,42" fill="#FABE00"/>' +
+          '<text x="432" y="28" text-anchor="middle" font-size="10" fill="#aaa" font-family="sans-serif">必要なら</text>' +
+          '<rect x="454" y="8" width="186" height="61" rx="5" fill="#fffbeb" stroke="#FABE00" stroke-width="1.5"/>' +
+          '<text x="547" y="30" text-anchor="middle" font-size="16" fill="#a07800" font-weight="700" font-family="sans-serif">弁護士</text>' +
+          '<text x="547" y="50" text-anchor="middle" font-size="11" fill="#a07800" font-family="sans-serif">専門判断</text>' +
         '</svg>' +
         '<div class="s-compare">' +
           '<div class="s-compare-col neutral">' +
@@ -617,12 +617,11 @@
     return '<section class="slide" data-section="part4" data-title="Q：AIが間違えたらどうするんですか？" data-notes="（フック）これが一番多い質問です。（少し間）結論から言うと——AIは間違えます。前提として、そういうものだと思って使ってください。（少し間）だからこそ、今日ルール②を先にお伝えしました。AIに探させる、人間が確認する、この2段階で使う。（接続）道具として使う感覚、これが大事です。">' +
       H('Q：AIが間違えたらどうするんですか？') +
       '<div class="slide-content">' +
-        '<div class="s-callout"><strong>A：間違えます。だから「元の文書で確認」が必須。</strong></div>' +
+        '<div class="s-callout" style="padding:1.5cqw 2cqw;font-size:calc(2.5cqw * var(--tz));"><strong>A：間違えます。だから「元の文書で確認」が必須。</strong></div>' +
         '<ul class="s-list" style="margin-top:1cqw;">' +
           '<li class="s-list-arrow">AIに探させる → 人間が確認する、の2段階で使う</li>' +
           '<li class="s-list-arrow">「第5条に書いてある」と言われたら、実際に第5条を開く</li>' +
-          '<li class="s-list-arrow">AIを信頼するのではなく、AIを道具として使う感覚</li>' +
-          '<li class="s-list-callout">ハルシネーションが怖い → だから今日ルール②を先に教えました</li>' +
+          '<li class="s-list-arrow">AIを信頼するのではなく、道具として使う感覚で</li>' +
         '</ul>' +
       '</div>' +
     '</section>';
@@ -632,11 +631,10 @@
     return '<section class="slide" data-section="part4" data-title="Q：ChatGPTとClaudeどっちがいいですか？" data-notes="（柔らかく）どちらでも十分です。強いて言えば、長い文書の読み込みはClaudeが安定している印象があります。（少し間）Googleドキュメントで管理している場合はGeminiが連携しやすい。用途に合わせて使い分けるのがおすすめです。（接続）有料版を1つ持つのが最もコスパがいいと思います。">' +
       H('Q：ChatGPTとClaudeどっちがいいですか？') +
       '<div class="slide-content">' +
-        '<div class="s-callout"><strong>A：どちらでも十分。長い文書はClaudeが安定している印象。</strong></div>' +
+        '<div class="s-callout" style="padding:1.5cqw 2cqw;font-size:calc(2.5cqw * var(--tz));"><strong>A：どちらでも十分。長い文書はClaudeが安定している印象。</strong></div>' +
         '<ul class="s-list" style="margin-top:1cqw;">' +
-          '<li class="s-list-arrow">ChatGPT（OpenAI）/ Claude（Anthropic）/ Gemini（Google）— どれも同等に使える</li>' +
-          '<li class="s-list-arrow">長い契約書・PDFの読み込みはClaudeが安定している</li>' +
-          '<li class="s-list-arrow">Googleドキュメントで管理している場合はGeminiが連携しやすい</li>' +
+          '<li class="s-list-arrow">ChatGPT・Claude・Gemini——どれも同等に使える</li>' +
+          '<li class="s-list-arrow">長い契約書・PDFはClaudeが安定。GoogleドキュメントはGeminiが連携しやすい</li>' +
           '<li class="s-list-callout">有料版を1つ持つのがおすすめ。月2,000〜3,000円で業務上のストレスがほぼなくなる</li>' +
         '</ul>' +
       '</div>' +
@@ -647,12 +645,11 @@
     return '<section class="slide" data-section="part4" data-title="Q：無料版でもできますか？" data-notes="（柔らかく）できます。ただし制限があります。1回あたりのトークン上限が低いので、長い契約書だと途中で打ち切られることがあります。（少し間）まず無料で試してみて、実務で使えそうなら有料版へ——この順番がおすすめです。">' +
       H('Q：無料版でもできますか？') +
       '<div class="slide-content">' +
-        '<div class="s-callout"><strong>A：できます。ただし制限があります。</strong></div>' +
+        '<div class="s-callout" style="padding:1.5cqw 2cqw;font-size:calc(2.5cqw * var(--tz));"><strong>A：できます。ただし制限があります。</strong></div>' +
         '<ul class="s-list" style="margin-top:1cqw;">' +
           '<li class="s-list-arrow">1回あたりのトークン上限が低い → 長い契約書は途中で打ち切られることがある</li>' +
           '<li class="s-list-arrow">1日の利用回数制限がある → 業務中に使えなくなる</li>' +
-          '<li class="s-list-arrow">ファイルのアップロード非対応のプランもある</li>' +
-          '<li class="s-list-callout">まず無料で試す → 実務で使えそうなら有料版へ、の順番がおすすめ</li>' +
+          '<li class="s-list-callout">まず無料で試す → 使えそうなら有料版へ</li>' +
         '</ul>' +
       '</div>' +
     '</section>';
@@ -662,11 +659,10 @@
     return '<section class="slide" data-section="part4" data-title="Q：毎回プロンプトを一から書くんですか？" data-notes="（柔らかく）書きません。テンプレートをコピーして&#39;立場&#39;だけ変える。それだけです。（少し間）Gemのカスタムインストラクションにテンプレートをセットしておくと、次からはゼロ入力でも動きます。&#39;毎回ゼロから書く&#39;は続かない——テンプレートが習慣化のカギです。">' +
       H('Q：毎回プロンプトを一から書くんですか？') +
       '<div class="slide-content">' +
-        '<div class="s-callout"><strong>A：書きません。テンプレートをコピーして「立場」だけ変える。</strong></div>' +
+        '<div class="s-callout" style="padding:1.5cqw 2cqw;font-size:calc(2.5cqw * var(--tz));"><strong>A：書きません。テンプレートをコピーして「立場」だけ変える。</strong></div>' +
         '<ul class="s-list" style="margin-top:1cqw;">' +
-          '<li class="s-list-arrow">今日お渡しするプロンプトテンプレートをそのまま使う</li>' +
-          '<li class="s-list-arrow">変えるのは「当社の立場」の部分だけ → 慣れれば1〜2分</li>' +
-          '<li class="s-list-arrow">Gemのカスタムインストラクションにテンプレートをセットしておくと次からゼロ入力</li>' +
+          '<li class="s-list-arrow">今日渡すテンプレートをそのまま使う</li>' +
+          '<li class="s-list-arrow">変えるのは「当社の立場」だけ → 慣れれば1〜2分</li>' +
           '<li class="s-list-callout">「毎回ゼロから書く」は続かない。テンプレートが習慣化のカギ</li>' +
         '</ul>' +
       '</div>' +
@@ -677,11 +673,10 @@
     return '<section class="slide" data-section="part4" data-title="Q：弁護士費用は削れますか？" data-notes="（フック）正直に答えます。（少し間）AIで削れるのは&#39;相談するかどうかを判断するまでのコスト&#39;です。問題が発生すれば弁護士は必要。AIで代替はできません。（少し間）ただ、弁護士に相談するかどうかを自分で判断できるようになる——これは大きい。相談するとき、内容が具体的な状態で臨めるので相談時間が短縮できます。（接続）&#39;弁護士不要&#39;ではなく&#39;無駄な相談ゼロ&#39;が正確な表現です。">' +
       H('Q：弁護士費用は削れますか？') +
       '<div class="slide-content">' +
-        '<div class="s-callout"><strong>A：AIで削れるのは「相談するかどうかを判断するまでのコスト」。</strong></div>' +
+        '<div class="s-callout" style="padding:1.5cqw 2cqw;font-size:calc(2.5cqw * var(--tz));"><strong>A：AIで削れるのは「相談するかどうかを判断するまでのコスト」。</strong></div>' +
         '<ul class="s-list" style="margin-top:1cqw;">' +
-          '<li class="s-list-arrow">実際に問題が発生すれば弁護士は必要。AIで代替はできない</li>' +
+          '<li class="s-list-arrow">問題が発生すれば弁護士は必要。AIで代替はできない</li>' +
           '<li class="s-list-arrow">「この条項は弁護士に確認すべきか？」を自分で判断できるようになる</li>' +
-          '<li class="s-list-arrow">相談するとき、内容が具体的になる → 相談時間が短縮 → コスト削減</li>' +
           '<li class="s-list-callout">「弁護士不要」ではなく「無駄な相談ゼロ」が正確な表現</li>' +
         '</ul>' +
       '</div>' +
@@ -767,9 +762,9 @@
   function slide44() {
     return '<section class="slide slide-ending" data-section="part4" data-title="今日から1通、試してみてください。" data-notes="（締めは前向きに）今日はここまでです。ありがとうございました。">' +
       '<div class="slide-content slide-content-center">' +
-        '<h1 class="s-ending-main">今日から1通、<br>試してみてください。</h1>' +
+        '<h1 class="s-ending-main">今日から1通、<br>試してみて。</h1>' +
         '<div class="s-ending-bar"></div>' +
-        '<p class="s-ending-sub">プロンプトテンプレートをお持ち帰りいただきます。<br>ありがとうございました。</p>' +
+        '<p class="s-ending-sub">プロンプトシート、持ち帰ってそのまま使って。<br>帰ったら今夜、1通だけ。</p>' +
       '</div>' +
     '</section>';
   }

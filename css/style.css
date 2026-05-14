@@ -550,6 +550,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
   padding: 1.5cqw .8cqw;
   background: var(--c-primary-pale);
